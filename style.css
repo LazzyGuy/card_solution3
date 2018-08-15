@@ -22,7 +22,7 @@ html {
 }
 .nav__display {
   color: white;
-  font-size: 2.5rem;
+  font-size: 5vw;
 }
 
 .main {
@@ -53,7 +53,7 @@ html {
   background: #87bbe6;
   box-shadow: 2px 2px 39px #000;
   border-radius: 10px;
-  /* transition: 1s; */
+  transition: 1s;
 }
 .card__display {
   height: 90%;
@@ -146,9 +146,9 @@ button:focus {
 }
 .back {
   transform: translate(10px, 10px);
-  /* z-index: 0; */
+  z-index: 0;
   background: #bddffc;
-  transition: 0.7s;
+  /* transition: 3s; */
 }
 .anime {
   animation-name: left;
@@ -158,6 +158,9 @@ button:focus {
 }
 @keyframes left {
   0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  50% {
     transform: translate(-400px, 10px) rotate(40deg);
   }
   100% {
