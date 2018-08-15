@@ -34,8 +34,8 @@ html {
 }
 
 .container {
-  height: 612px;
-  width: 375px;
+  height: 100%;
+  width: 100%;
   background: white;
   padding: 5px;
   display: flex;
@@ -47,23 +47,14 @@ html {
 }
 
 .card {
+  position: relative;
   height: 486px;
   width: 306px;
   background: #87bbe6;
   box-shadow: 2px 2px 39px #000;
   border-radius: 10px;
+  /* transition: 1s; */
 }
-.card__top {
-  height: 10%;
-  padding-left: 10px;
-  z-index: 1;
-}
-.card__top_arrow {
-  color: white;
-  font-size: 40px;
-  cursor: pointer;
-}
-
 .card__display {
   height: 90%;
   display: flex;
@@ -127,17 +118,44 @@ button:focus {
   padding-bottom: 10px;
 }
 
+.oops {
+  color: white;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
 #first {
   position: fixed;
-  z-index: 1;
-  transform: translate(20px, 20px);
 }
 #second {
   position: fixed;
-  transform: translate(10px, 10px);
-  z-index: 2;
+  background: lightcoral;
 }
 #third {
   position: fixed;
-  z-index: 3;
+  background: lightseagreen;
+}
+.front {
+  z-index: 2;
+  opacity: 1;
+}
+.back {
+  transform: translate(10px, 10px);
+  z-index: 1;
+  background: #bddffc;
+  transition: 0.7s;
+}
+.anime {
+  animation-name: left;
+  animation-duration: 0.7s;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@keyframes left {
+  0% {
+    transform: translate(-200px, 10px) rotate(40deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
 }

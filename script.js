@@ -1,39 +1,23 @@
-let third = document.getElementById("third");
-let sec = document.getElementById("second");
 let first = document.getElementById("first");
-function second() {
-  third.style.transition = ".5s";
-  third.style.transform = "translateX(-100%)";
-  third.style.opacity = "0";
-  setTimeout(() => {
-    third.style.zIndex = 1;
-    sec.style.zIndex = 3;
-    first.style.zIndex = 2;
-    third.style.transform = "translate(0)";
-  }, 500);
+let second = document.getElementById("second");
+let third = document.getElementById("third");
+function a() {
+  // first.classList.add("anime");
+  first.classList.add("anime", "back");
+  first.classList.remove("front");
+  second.classList.remove("back", "anime");
+  second.classList.add("front");
 }
-
-function f() {
-  sec.style.transition = ".5s";
-  sec.style.transform = "translateX(-100%)";
-  sec.style.opacity = "0";
-  setTimeout(() => {
-    sec.style.zIndex = 1;
-    first.style.zIndex = 3;
-    third.style.zIndex = 2;
-    sec.style.transform = "translate(0);";
-  }, 500);
+function b() {
+  // second.classList.add("anime");
+  second.classList.add("back", "anime");
+  second.classList.remove("front");
+  third.classList.remove("back", "anime");
+  third.classList.add("front");
 }
-
-function spin() {
-  first.style.transition = ".5s";
-  first.style.transform = "translateX(-100%)";
-  first.style.opacity = "0";
-  setTimeout(() => {
-    first.style.zIndex = 1;
-    sec.style.zIndex = 2;
-    third.style.zIndex = 3;
-    first.style.transform = "translate(20px, 20px)";
-    first.style.opacity = "0";
-  }, 500);
+function c() {
+  third.classList.add("back", "anime");
+  third.classList.remove("front");
+  first.classList.remove("back", "anime");
+  first.classList.add("front");
 }
